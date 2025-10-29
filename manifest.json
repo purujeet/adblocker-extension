@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Site Blocker Pro",
+  "version": "3.0.0",
+  "description": "Beautiful, powerful site blocker with dark mode and ad blocking.",
+  "permissions": ["storage", "webNavigation", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Site Blocker Pro"
+  }
+}

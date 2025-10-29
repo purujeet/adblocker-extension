@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site Blocker Pro</title>
+  <link rel="stylesheet" href="popup.css" />
+  <link rel="stylesheet" href="assets/material-icons.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="title">
+        <span class="material-icons">shield</span>
+        <h1>Site Blocker</h1>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="Toggle theme">
+        <span class="material-icons">darkmode</span>
+      </button>
+    </header>
+
+    <!-- Add Site -->
+    <div class="card add-card">
+      <div class="mdc-text-field mdc-text-field--filled">
+        <span class="mdc-text-field__ripple"></span>
+        <input type="text" id="siteInput" class="mdc-text-field__input" placeholder=" " />
+        <label class="mdc-floating-label">Add site (e.g. youtube.com)</label>
+        <span class="mdc-line-ripple"></span>
+        <button id="addBtn" class="mdc-icon-button material-icons">Add</button>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="exportBtn" class="mdc-button mdc-button--outlined">
+        <span class="material-icons">download</span> Export
+      </button>
+      <label id="importLabel" class="mdc-button mdc-button--outlined">
+        <span class="material-icons">upload</span> Import
+        <input type="file" id="importInput" accept=".json" hidden />
+      </label>
+    </div>
+
+    <!-- Search -->
+    <div class="card search-card">
+      <div class="mdc-text-field mdc-text-field--filled">
+        <span class="mdc-text-field__ripple"></span>
+        <input type="text" id="searchInput" class="mdc-text-field__input" placeholder=" " />
+        <label class="mdc-floating-label">Search blocked sites</label>
+        <span class="material-icons search-icon">search</span>
+        <span class="mdc-line-ripple"></span>
+      </div>
+    </div>
+
+    <!-- List -->
+    <div class="card list-card">
+      <ul id="blockList" class="mdc-list"></ul>
+      <div id="emptyState" class="empty-state">
+        <span class="material-icons">block</span>
+        <p>No sites blocked yet.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
